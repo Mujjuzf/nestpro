@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Colors.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+
 
 class splashscreen extends StatefulWidget {
   const splashscreen({Key? key}) : super(key: key);
