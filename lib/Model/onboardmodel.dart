@@ -6,7 +6,8 @@ class OnboardingContent {
   OnboardingContent({this.image1, this.image2 });
 }
 
-List<OnboardingContent> contents = [
+List<OnboardingContent>
+contents = [
   OnboardingContent(
     image1: "asset/intro1.png",
     image2: "asset/intro1a.png"
