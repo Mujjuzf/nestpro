@@ -1,17 +1,35 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../Colors.dart';
+import '../Onboarding/onboardscreen.dart';
 
 
-class splashscreen extends StatefulWidget {
-  const splashscreen({Key? key}) : super(key: key);
+class Splashscreen extends StatefulWidget {
+  const Splashscreen({Key? key}) : super(key: key);
 
   @override
-  _splashscreenState createState() => _splashscreenState();
+  _SplashscreenState createState() => _SplashscreenState();
 }
 
-class _splashscreenState extends State<splashscreen> {
+class _SplashscreenState extends State<Splashscreen> {
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 2), (){
+
+      Get.offAll(OnboardScreen());
+
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +43,8 @@ class _splashscreenState extends State<splashscreen> {
             SizedBox(height: 200),
             Padding(
               padding:   EdgeInsets.only(bottom: 30),
-              child: Text("NEST",style: TextStyle(color: Colors.white,fontSize: 35),),
+              child: InkWell(
+                  child: Text("NEST",style: TextStyle(color: Colors.white,fontSize: 35),)),
             )
           ],
         ),

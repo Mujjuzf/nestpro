@@ -17,6 +17,7 @@ class OnboardScreen extends StatefulWidget {
 
 class _OnboardScreenState extends State<OnboardScreen> {
   int currentIndex = 0;
+  bool timerComplete = false;
   PageController  _controller = PageController();
   //
   @override
@@ -31,15 +32,17 @@ class _OnboardScreenState extends State<OnboardScreen> {
 
 
 
+
+
   Widget build(BuildContext context) {
 
     Timer.periodic(Duration(seconds: 5), (timer){
       print(currentIndex.toString() + ' ' + contents.length.toString());
-      if(currentIndex < contents.length -1){
+      if(currentIndex < contents.length -1 && !timerComplete){
         setState(() {
 
             currentIndex ++;
-
+            _controller.jumpToPage(currentIndex);
 
 
         });
@@ -47,10 +50,10 @@ class _OnboardScreenState extends State<OnboardScreen> {
 
       }else{
 
-        setState(() {
-          currentIndex =3;
-        });
-
+      timer.cancel();
+      setState(() {
+        timerComplete = true;
+      });
       }
 
 
@@ -76,8 +79,8 @@ class _OnboardScreenState extends State<OnboardScreen> {
                    children: [
 
                      Buildot(),
-                     Image.asset(contents[currentIndex].image2!,height: 320,),
-                     Image.asset(contents[currentIndex].image1!),
+                     Image.asset(contents[i].image2!,height: 320,),
+                     Image.asset(contents[i].image1!),
 
 
 
