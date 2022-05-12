@@ -3,8 +3,11 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:nestpro/Colors.dart';
+import 'package:nestpro/Maindashboard/maindashboard.dart';
 
 import '../../Model/onboardmodel.dart';
 
@@ -80,7 +83,12 @@ class _OnboardScreenState extends State<OnboardScreen> {
 
                      Buildot(),
                      Image.asset(contents[i].image2!,height: 320,),
-                     Image.asset(contents[i].image1!),
+
+                     InkWell(
+                         onTap: (){
+                           Get.to(MainDashboard());
+                         },
+                         child: Image.asset(contents[i].image1!)),
 
 
 
@@ -100,14 +108,22 @@ class _OnboardScreenState extends State<OnboardScreen> {
                        mainAxisAlignment: MainAxisAlignment.center,
                        children:
                        List.generate(contents.length,((index) =>
-                           Container(
-                             height: 10,
-                             width: currentIndex == index ? 10:30,
-                             margin: EdgeInsets.only(right: 5),
-                             decoration: BoxDecoration(
-                                 borderRadius: BorderRadius.circular(20),
-                                 color: Slbarclor
-                             ),
+                           Stack(
+                             children :[
+                               Container(
+                                 height: 10,width: 80,
+                                 child: LinearProgressIndicator(backgroundColor: Slbarclor,
+                                   valueColor: AlwaysStoppedAnimation<Color>(Slbarclorr),),
+                               ),
+                               Container(
+                               height: 10,
+                               width: currentIndex == index ? 40:0,
+                               margin: EdgeInsets.only(right: 40,),
+                               decoration: BoxDecoration(
+                                   borderRadius: BorderRadius.circular(20),
+                                   color: Slbarclor
+                               ),
+                             ),]
                            )
                        )
                        ),

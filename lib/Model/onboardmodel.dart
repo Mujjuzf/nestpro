@@ -1,6 +1,11 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 class OnboardingContent {
   String? image1;
   String? image2;
+
+
 
 
   OnboardingContent({this.image1, this.image2 });
@@ -9,8 +14,10 @@ class OnboardingContent {
 List<OnboardingContent>
 contents = [
   OnboardingContent(
+
     image1: "asset/intro1.png",
-    image2: "asset/intro1a.png"
+    image2: "asset/intro1a.png",
+
   ),
   OnboardingContent(
       image1: "asset/intro2.png",

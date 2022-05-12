@@ -45,7 +45,8 @@ class _SplashscreenState extends State<Splashscreen> {
               padding:   EdgeInsets.only(bottom: 30),
               child: InkWell(
                   child: Text("NEST",style: TextStyle(color: Colors.white,fontSize: 35),)),
-            )
+            ),
+
           ],
         ),
       ),
