@@ -79,21 +79,32 @@ class _MainDashboardState extends State<MainDashboard> {
           centerTitle: true,
         ),
 
+        // bottomNavigationBar: Padding(
+        //   padding:   EdgeInsets.only(bottom: 15.0),
+        //   child: FloatingActionButton.extended(
+        //
+        //     onPressed: (){}, label:Image.asset("asset/bottomnvg.png"),backgroundColor:Colors.transparent ,),
+        // ),
+          body: Stack(
+            children:[
 
-          body: SingleChildScrollView(
-            child: Column(
-              children: [
-                Image.asset("asset/intro4.png"),
-                Image.asset("asset/intro4.png"),
-                Image.asset("asset/intro4.png"),
-                Image.asset("asset/intro4.png"),
-                Image.asset("asset/intro4.png"),
-
-                FloatingActionButton.extended(
+              SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.asset("asset/intro4.png"),
+                  Image.asset("asset/intro4.png"),
+                  Image.asset("asset/intro4.png"),
+                  Image.asset("asset/intro4.png"),
+                  Image.asset("asset/intro4.png")],
+              ),
+            ),
+              Padding(
+                padding:   EdgeInsets.only(top: 640.0,left: 32),
+                child: FloatingActionButton.extended(
 
                   onPressed: (){}, label:Image.asset("asset/bottomnvg.png"),backgroundColor:Colors.transparent ,),
-              ],
-            ),
+              ),
+            ]
           ),
           ),
     );
