@@ -89,13 +89,15 @@ class _MainDashboardState extends State<MainDashboard> {
             children:[
 
               SingleChildScrollView(
-              child: Column(
-                children: [
-                  Image.asset("asset/intro4.png"),
-                  Image.asset("asset/intro4.png"),
-                  Image.asset("asset/intro4.png"),
-                  Image.asset("asset/intro4.png"),
-                  Image.asset("asset/intro4.png")],
+              child: Center(
+                child: Column(
+                  children: [
+                    Image.asset("asset/intro4.png"),
+                    Image.asset("asset/intro4.png"),
+                    Image.asset("asset/intro4.png"),
+                    Image.asset("asset/intro4.png"),
+                    Image.asset("asset/intro4.png")],
+                ),
               ),
             ),
               Padding(
