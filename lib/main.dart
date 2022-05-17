@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
-
+import 'LoginScreen/loginscreenb.dart';
+import 'LoginScreen/logiscreena.dart';
 import 'Maindashboard/maindashboard.dart';
 import 'Onboarding/onboardscreen.dart';
+import 'OtpScreen/otpscreen.dart';
+import 'SignupScreen/signupscreen.dart';
 import 'SplashScreen/splashscreen.dart';
 
 void main() {

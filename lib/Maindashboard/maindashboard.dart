@@ -25,6 +25,7 @@ class _MainDashboardState extends State<MainDashboard> {
         backgroundColor: Bgcolor,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           toolbarHeight: 80,
           backgroundColor: Bgcolor,
           title: Row(
@@ -86,6 +87,7 @@ class _MainDashboardState extends State<MainDashboard> {
         //     onPressed: (){}, label:Image.asset("asset/bottomnvg.png"),backgroundColor:Colors.transparent ,),
         // ),
           body: Stack(
+            alignment: Alignment.bottomCenter,
             children:[
 
               SingleChildScrollView(
@@ -101,7 +103,7 @@ class _MainDashboardState extends State<MainDashboard> {
               ),
             ),
               Padding(
-                padding:   EdgeInsets.only(top: 640.0,left: 32),
+                padding: const EdgeInsets.only(bottom: 15.0),
                 child: FloatingActionButton.extended(
 
                   onPressed: (){}, label:Image.asset("asset/bottomnvg.png"),backgroundColor:Colors.transparent ,),

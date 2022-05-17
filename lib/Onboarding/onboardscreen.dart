@@ -10,6 +10,7 @@ import 'package:nestpro/Colors.dart';
 import 'package:nestpro/Maindashboard/maindashboard.dart';
 
 import '../../Model/onboardmodel.dart';
+import '../LoginScreen/logiscreena.dart';
 
 class OnboardScreen extends StatefulWidget {
   const OnboardScreen({Key? key}) : super(key: key);
@@ -22,6 +23,10 @@ class _OnboardScreenState extends State<OnboardScreen> {
   int currentIndex = 0;
   bool timerComplete = false;
   PageController  _controller = PageController();
+  late Timer timer  ;
+
+  double _start = 5;
+
   //
   @override
   void initState(){
@@ -39,14 +44,14 @@ class _OnboardScreenState extends State<OnboardScreen> {
 
   Widget build(BuildContext context) {
 
-    Timer.periodic(Duration(seconds: 5), (timer){
+    timer = Timer.periodic(Duration(seconds: 5), (timer){
       print(currentIndex.toString() + ' ' + contents.length.toString());
       if(currentIndex < contents.length -1 && !timerComplete){
         setState(() {
 
             currentIndex ++;
             _controller.jumpToPage(currentIndex);
-
+            _start -- ;
 
         });
 
@@ -81,12 +86,24 @@ class _OnboardScreenState extends State<OnboardScreen> {
                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                    children: [
 
-                     Buildot(),
-                     Image.asset(contents[i].image2!,height: 320,),
+                     // Buildot(),
+                     Stack(
+                       children: [
+                         Container(
+                           height: 10,width: 80,
+                           child: LinearProgressIndicator(
+                             value: _start,
+                             backgroundColor: Slbarclor,
+                             valueColor: AlwaysStoppedAnimation<Color>(Slbarclorr),
+                           ),
+                         ),
+                         Image.asset(contents[i].image2!,height: 320,),
+                       ],
+                     ),
 
                      InkWell(
                          onTap: (){
-                           Get.to(MainDashboard());
+                           Get.to(Loginscreena());
                          },
                          child: Image.asset(contents[i].image1!)),
 
@@ -112,8 +129,11 @@ class _OnboardScreenState extends State<OnboardScreen> {
                              children :[
                                Container(
                                  height: 10,width: 80,
-                                 child: LinearProgressIndicator(backgroundColor: Slbarclor,
-                                   valueColor: AlwaysStoppedAnimation<Color>(Slbarclorr),),
+                                 child: LinearProgressIndicator(
+                                   value: _start,
+                                   backgroundColor: Slbarclor,
+                                   valueColor: AlwaysStoppedAnimation<Color>(Slbarclorr),
+                                 ),
                                ),
                                Container(
                                height: 10,

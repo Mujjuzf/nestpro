@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "529436980105",
+    "project_id": "nestfi-39f4e",
+    "storage_bucket": "nestfi-39f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529436980105:android:114f9b67f27f6207602758",
+        "android_client_info": {
+          "package_name": "com.nestfi.nestpro.nestpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529436980105-9aclf4gucg18bb9a7fs7110479etec7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nestfi.nestpro.nestpro",
+            "certificate_hash": "b0e1a95162cd827d00bdeac510a1adf807bbbd5a"
+          }
+        },
+        {
+          "client_id": "529436980105-hr0a4ll6jsba6m7f7ru8dalo5kp8a37v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhO5_2JtJBTUkERvad_bTLjyCebZkZ_Fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529436980105-hr0a4ll6jsba6m7f7ru8dalo5kp8a37v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
